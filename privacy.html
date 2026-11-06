@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — Siatoi</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 20px; color: #1a1a2e; line-height: 1.7; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; }
+    h3 { font-size: 1.05rem; margin-top: 1.4rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    ul { padding-left: 1.2rem; }
+    hr { margin: 3rem 0; border: 0; border-top: 1px solid #ddd; }
+    code { background: #f4f4f8; padding: 1px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Politique de confidentialité</h1>
+  <p class="meta">Dernière mise à jour : 6 novembre 2026 &middot; Version 1.0.1</p>
+
+  <h2>1. Responsable du traitement</h2>
+  <p>Siatoi est éditée par <strong>Bwitix</strong>.<br>
+  Contact : <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a> &middot;
+  WhatsApp : <a href="https://wa.me/24174746847">+241 74 74 68 47</a></p>
+
+  <h2>2. Principe général</h2>
+  <p>Siatoi est une application de communication <strong>locale</strong> : pas de compte
+  en ligne, pas de serveur de messagerie. Ton profil, tes messages, tes photos, tes
+  vidéos et l'historique du fil restent sur ton appareil et sont échangés directement
+  avec les appareils proches, via le Wi-Fi local ou le Bluetooth.</p>
+
+  <h2>3. Données stockées uniquement sur ton appareil</h2>
+  <ul>
+    <li>pseudo, avatar, statut, bio, centres d'intérêt ;</li>
+    <li>messages, commentaires, publications et réactions ;</li>
+    <li>photos, vidéos, fichiers et messages vocaux que tu choisis ;</li>
+    <li>liste de blocage, signalements locaux et souvenirs du radar ;</li>
+    <li>préférences (thème, langue, réglages).</li>
+  </ul>
+
+  <h2>4. Données transmises à Firebase (Bwitix / Google)</h2>
+  <p>Firebase Firestore est utilisé pour quatre fonctions :</p>
+  <ul>
+    <li><strong>Publicités Bwitix</strong> : identifiant d'installation (<code>installId</code>),
+      affichage et clic sur une annonce, date et type d'appareil.</li>
+    <li><strong>Présence</strong> : pseudo, rôle, plateforme, version de l'app et date de
+      dernière activité, afin de compter les utilisateurs en ligne.</li>
+    <li><strong>Badge vérifié</strong> : l'app lit un document associé au <code>peerId</code>
+      local. Aucune donnée personnelle supplémentaire n'est envoyée.</li>
+    <li><strong>Position approximative</strong> : uniquement si tu l'autorises (voir §5).</li>
+  </ul>
+  <p>Aucun message, média ou contenu de conversation n'est envoyé à Firebase.</p>
+
+  <h2>5. Position approximative (facultative)</h2>
+  <p>Après ton accord explicite, Siatoi peut envoyer à Bwitix une position
+  <strong>approximative</strong> : ville, région, pays et coordonnées arrondies à environ
+  un kilomètre. Elle sert uniquement à des statistiques d'usage par zone.</p>
+  <ul>
+    <li>Elle n'est <strong>jamais affichée aux autres utilisateurs</strong>.</li>
+    <li>Elle est stockée dans Firestore et visible uniquement par Bwitix.</li>
+    <li>Tu peux la désactiver à tout moment dans <strong>Paramètres → Partager ma ville</strong> ;
+      le document correspondant est alors supprimé.</li>
+    <li>Aucune coordonnée GPS précise n'est conservée.</li>
+  </ul>
+
+  <h2>6. Bluetooth (proximité)</h2>
+  <p>La découverte Bluetooth est <strong>facultative</strong> et se désactive dans les
+  paramètres. Quand elle est active :</p>
+  <ul>
+    <li>l'appareil émet un identifiant éphémère et les informations de profil nécessaires
+      à la découverte (pseudo, avatar, statut) ;</li>
+    <li>les échanges de messages et de médias se font directement d'appareil à appareil ;</li>
+    <li>aucune position n'est déduite ni envoyée à Firebase via le Bluetooth ;</li>
+    <li>rien n'est conservé par un serveur : la portée est limitée aux appareils proches.</li>
+  </ul>
+
+  <h2>7. Données jamais collectées</h2>
+  <ul>
+    <li>coordonnées GPS précises ;</li>
+    <li>contacts du carnet d'adresses ;</li>
+    <li>identifiants publicitaires système (IDFA / Advertising ID) ;</li>
+    <li>contenu de tes messages et de tes médias.</li>
+  </ul>
+
+  <h2>8. Partage</h2>
+  <p>Les données publicitaires, de présence et, si tu l'actives, la position approximative
+  sont transmises à Bwitix et à Firebase (Google). La position approximative n'est
+  jamais partagée avec les autres utilisateurs. Aucun autre tiers ne reçoit de données.
+  Les messages et médias ne quittent pas tes appareils proches.</p>
+
+  <h2>9. Durée de conservation</h2>
+  <ul>
+    <li>Données locales : jusqu'à leur suppression, la suppression de ton compte ou la
+      désinstallation.</li>
+    <li>Événements publicitaires : jusqu'à 13 mois chez le partenaire.</li>
+    <li>Position approximative : jusqu'à sa désactivation dans les paramètres ou sa
+      suppression par Bwitix.</li>
+    <li>Présence : le document est mis à jour en continu et peut être supprimé lors de la
+      suppression du compte.</li>
+  </ul>
+
+  <h2>10. Sécurité</h2>
+  <ul>
+    <li>Les appels Firebase utilisent HTTPS.</li>
+    <li>Les échanges locaux (Wi-Fi / Bluetooth) ne sont pas chiffrés de bout en bout :
+      évite les réseaux publics non maîtrisés.</li>
+    <li>Les données d'identité et de fil sont stockées localement (SQLite / préférences).</li>
+    <li>Les messages privés sont purgés automatiquement après quelques minutes.</li>
+    <li>Les publications du fil quittent l'accueil après 24 heures.</li>
+  </ul>
+
+  <h2>11. Contenu généré par les utilisateurs</h2>
+  <p>Tu peux signaler un post, un profil ou un message depuis l'application. Le
+  signalement ouvre un e-mail ou un message WhatsApp vers
+  <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a> /
+  <a href="https://wa.me/24174746847">+241 74 74 68 47</a>. Un post signalé peut aussi
+  être masqué localement sur ton appareil.</p>
+
+  <h2>12. Tes droits (RGPD)</h2>
+  <p>Tu disposes des droits d'accès, de rectification, d'effacement, de limitation,
+  d'opposition et de portabilité, ainsi que du droit de saisir l'autorité de contrôle
+  compétente.</p>
+  <ul>
+    <li><strong>Accès</strong> : tes données sont visibles dans l'application.</li>
+    <li><strong>Suppression</strong> : « Supprimer mon compte » efface le profil, les
+      messages, les médias et la base locale.</li>
+    <li><strong>Portabilité</strong> : export Excel/PDF depuis l'application.</li>
+    <li><strong>Retrait du consentement</strong> : désactive la position ou le Bluetooth
+      dans les paramètres.</li>
+  </ul>
+  <p>Pour toute demande : <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a>.</p>
+
+  <h2>13. Enfants</h2>
+  <p>Siatoi s'adresse aux utilisateurs de 12 ans et plus. Aucune donnée n'est
+  volontairement collectée auprès d'enfants plus jeunes.</p>
+
+  <h2>14. Modifications</h2>
+  <p>Cette politique peut être mise à jour. La date en tête de page indique la dernière
+  révision.</p>
+
+  <h2>15. Contact</h2>
+  <p><strong>Email :</strong> <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a><br>
+  <strong>WhatsApp :</strong> <a href="https://wa.me/24174746847">+241 74 74 68 47</a></p>
+
+  <hr>
+
+  <h1 id="english">Privacy Policy</h1>
+  <p class="meta">Last updated: November 6, 2026 &middot; Version 1.0.1</p>
+
+  <h2>1. Data controller</h2>
+  <p>Siatoi is published by <strong>Bwitix</strong>.<br>
+  Contact: <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a> &middot;
+  WhatsApp: <a href="https://wa.me/24174746847">+241 74 74 68 47</a></p>
+
+  <h2>2. Core principle</h2>
+  <p>Siatoi is a <strong>local</strong> communication app: no online account and no
+  messaging server. Your profile, messages, photos, videos and feed stay on your device
+  and are exchanged directly with nearby devices over local Wi-Fi or Bluetooth.</p>
+
+  <h2>3. Data stored on your device only</h2>
+  <ul>
+    <li>nickname, avatar, status, bio, interests;</li>
+    <li>messages, comments, posts and reactions;</li>
+    <li>chosen photos, videos, files and voice messages;</li>
+    <li>block list, local reports and radar memories;</li>
+    <li>preferences (theme, language, settings).</li>
+  </ul>
+
+  <h2>4. Data sent to Firebase (Bwitix / Google)</h2>
+  <ul>
+    <li><strong>Bwitix ads</strong>: installation ID (<code>installId</code>), ad
+      impression/click, date and device type.</li>
+    <li><strong>Presence</strong>: nickname, role, platform, app version and last-seen
+      time, to count online users.</li>
+    <li><strong>Verified badge</strong>: the app reads a document linked to the local
+      <code>peerId</code>. No additional personal data is sent.</li>
+    <li><strong>Approximate location</strong>: only with your consent (see §5).</li>
+  </ul>
+  <p>No message, media or conversation content is ever sent to Firebase.</p>
+
+  <h2>5. Approximate location (optional)</h2>
+  <p>After your explicit consent, Siatoi may send Bwitix an <strong>approximate</strong>
+  location: city, region, country and coordinates rounded to about one kilometre. It is
+  used only for usage statistics by area.</p>
+  <ul>
+    <li>It is <strong>never shown to other users</strong>.</li>
+    <li>It is stored in Firestore and visible only to Bwitix.</li>
+    <li>You can disable it anytime in <strong>Settings → Share my city</strong>; the
+      document is then deleted.</li>
+    <li>No precise GPS coordinates are stored.</li>
+  </ul>
+
+  <h2>6. Bluetooth (proximity)</h2>
+  <p>Bluetooth discovery is <strong>optional</strong> and can be disabled in settings.
+  When enabled:</p>
+  <ul>
+    <li>the device broadcasts an ephemeral ID and the profile information needed for
+      discovery (nickname, avatar, status);</li>
+    <li>messages and media are transferred directly device to device;</li>
+    <li>no location is inferred or sent to Firebase through Bluetooth;</li>
+    <li>nothing is kept by a server: range is limited to nearby devices.</li>
+  </ul>
+
+  <h2>7. Data never collected</h2>
+  <ul>
+    <li>precise GPS coordinates;</li>
+    <li>address book contacts;</li>
+    <li>system advertising IDs (IDFA / Advertising ID);</li>
+    <li>message or media content.</li>
+  </ul>
+
+  <h2>8. Sharing</h2>
+  <p>Advertising data, presence data and — if enabled — approximate location are sent to
+  Bwitix and Firebase (Google). Approximate location is never shared with other users.
+  No other third party receives data. Messages and media never leave your nearby
+  devices.</p>
+
+  <h2>9. Retention</h2>
+  <ul>
+    <li>Local data: until you delete it, delete your account, or uninstall the app.</li>
+    <li>Ad events: up to 13 months with the partner.</li>
+    <li>Approximate location: until disabled in settings or deleted by Bwitix.</li>
+    <li>Presence: continuously updated and may be deleted on account deletion.</li>
+  </ul>
+
+  <h2>10. Security</h2>
+  <ul>
+    <li>Firebase calls use HTTPS.</li>
+    <li>Local Wi-Fi / Bluetooth traffic is not end-to-end encrypted: avoid untrusted
+      public networks.</li>
+    <li>Identity and feed data are stored locally (SQLite / preferences).</li>
+    <li>Private messages are purged automatically after a few minutes.</li>
+    <li>Feed posts leave the home feed after 24 hours.</li>
+  </ul>
+
+  <h2>11. User-generated content</h2>
+  <p>You can report a post, profile or message from the app. Reporting opens an email or
+  WhatsApp message to <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a> /
+  <a href="https://wa.me/24174746847">+241 74 74 68 47</a>. A reported post can also be
+  hidden locally on your device.</p>
+
+  <h2>12. Your rights (GDPR)</h2>
+  <p>You have the rights of access, rectification, erasure, restriction, objection and
+  portability, and the right to lodge a complaint with a supervisory authority.</p>
+  <ul>
+    <li><strong>Access</strong>: your data is visible in the app.</li>
+    <li><strong>Erasure</strong>: “Delete my account” wipes the profile, messages, media
+      and local database.</li>
+    <li><strong>Portability</strong>: Excel/PDF export from the app.</li>
+    <li><strong>Withdraw consent</strong>: disable location or Bluetooth in settings.</li>
+  </ul>
+  <p>For any request: <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a>.</p>
+
+  <h2>13. Children</h2>
+  <p>Siatoi is intended for users aged 12 and over. We do not knowingly collect data
+  from younger children.</p>
+
+  <h2>14. Changes</h2>
+  <p>This policy may be updated. The date at the top shows the latest revision.</p>
+
+  <h2>15. Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:bwitix@gmail.com">bwitix@gmail.com</a><br>
+  <strong>WhatsApp:</strong> <a href="https://wa.me/24174746847">+241 74 74 68 47</a></p>
+
+  <hr>
+  <p><small>&copy; 2026 Bwitix — Siatoi. Tous droits réservés / All rights reserved.</small></p>
+</body>
+</html>
